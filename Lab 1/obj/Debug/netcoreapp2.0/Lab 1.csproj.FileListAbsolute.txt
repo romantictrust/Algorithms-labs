@@ -1,0 +1,11 @@
+M:\stash\AlgorithmsLab\Lab 1\bin\Debug\netcoreapp2.0\Lab 1.deps.json
+M:\stash\AlgorithmsLab\Lab 1\bin\Debug\netcoreapp2.0\Lab 1.runtimeconfig.json
+M:\stash\AlgorithmsLab\Lab 1\bin\Debug\netcoreapp2.0\Lab 1.runtimeconfig.dev.json
+M:\stash\AlgorithmsLab\Lab 1\bin\Debug\netcoreapp2.0\Lab 1.dll
+M:\stash\AlgorithmsLab\Lab 1\bin\Debug\netcoreapp2.0\Lab 1.pdb
+M:\stash\AlgorithmsLab\Lab 1\obj\Debug\netcoreapp2.0\Lab 1.csprojAssemblyReference.cache
+M:\stash\AlgorithmsLab\Lab 1\obj\Debug\netcoreapp2.0\Lab 1.csproj.CoreCompileInputs.cache
+M:\stash\AlgorithmsLab\Lab 1\obj\Debug\netcoreapp2.0\Lab 1.AssemblyInfoInputs.cache
+M:\stash\AlgorithmsLab\Lab 1\obj\Debug\netcoreapp2.0\Lab 1.AssemblyInfo.cs
+M:\stash\AlgorithmsLab\Lab 1\obj\Debug\netcoreapp2.0\Lab 1.dll
+M:\stash\AlgorithmsLab\Lab 1\obj\Debug\netcoreapp2.0\Lab 1.pdb
