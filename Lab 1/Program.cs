@@ -6,13 +6,21 @@ namespace Global
     {
         static void Main()
         {
-            int arrLen = 1000;
-            int[] fromTo = { -1, 2 };
+            int arrLen = 10000000;
+            int[] fromTo = { -5000000, 5000000 };
+            int start = 0;
+            int end = arrLen - 1;
             ArrayCreator arr = new ArrayCreator(arrLen, fromTo);
-            foreach (var entry in arr.Arr)
-            {
-                Console.Write("{0} ",entry);
-            }
+            int[] filledArr = arr.Arr;
+            var watch = System.Diagnostics.Stopwatch.StartNew();
+            Sorts.QuickSort(filledArr, start, end);
+            watch.Stop();
+            var elapsedMs = watch.ElapsedMilliseconds;
+            Console.WriteLine("{0}ms", elapsedMs);
+            // foreach (var entry in filledArr)
+            // {
+            //     Console.Write("{0} ", entry);
+            // }
         }
     }
 }
