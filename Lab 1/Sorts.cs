@@ -38,6 +38,37 @@ namespace Global
             return pivot;
         }
 
+        public void InsertionSort(int[] arr, int left, int right)
+        {
+            int j;
+            for (int i = left + 1; i <= right; i++)
+            {
+                j = i - 1;
+                while (j >= left && arr[j] > arr[j + 1])
+                {
+                    Swap(arr, j, j + 1);
+                    j--;
+                }
+            }
+        }
+
+        public void CombinedSort(int[] arr, int left, int right, int leftUnsorted)
+        {
+            if (left < right)
+            {
+                if (right - left + 1 <= leftUnsorted)
+                {
+                    InsertionSort(arr, left, right);
+                }
+                else
+                {
+                    int q = FindPivot(arr, left, right);
+                    CombinedSort(arr, left, q - 1, leftUnsorted);
+                    CombinedSort(arr, q + 1, right, leftUnsorted);
+                }
+            }
+        }
+
         private void Swap(int[] arr, int x, int y)
         {
             int temp = arr[x];
