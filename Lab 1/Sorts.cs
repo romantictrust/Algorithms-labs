@@ -4,53 +4,46 @@ namespace Global
 {
     public class Sorts
     {
-        public static void QuickSort(int[] arr, int left, int right)
+        private Random random;
+
+        public Sorts()
+        {
+            this.random = new Random();
+        }
+
+        public void QuickSort(int[] arr, int left, int right, bool isRand)
         {
             if (left < right)
             {
-                int pivot = Partition(arr, left, right);
-
-                if (pivot > 1)
-                {
-                    QuickSort(arr, left, pivot - 1);
-                }
-                if (pivot + 1 < right)
-                {
-                    QuickSort(arr, pivot + 1, right);
-                }
+                if (isRand) Swap(arr, random.Next(left, right), right);
+                int pivot = FindPivot(arr, left, right);
+                QuickSort(arr, left, pivot - 1, isRand);
+                QuickSort(arr, pivot + 1, right, isRand);
             }
-
         }
 
-        public static int Partition(int[] arr, int left, int right)
+        private int FindPivot(int[] arr, int left, int right)
         {
-            int pivot = arr[left];
-            while (true)
+            int x = arr[right];
+            int pivot = left;
+            for (int i = left; i < right; i++)
             {
-
-                while (arr[left] < pivot)
+                if (arr[i] < x)
                 {
-                    left++;
-                }
-
-                while (arr[right] > pivot)
-                {
-                    right--;
-                }
-
-                if (left < right)
-                {
-                    if (arr[left] == arr[right]) return right;
-
-                    int temp = arr[left];
-                    arr[left] = arr[right];
-                    arr[right] = temp;
-                }
-                else
-                {
-                    return right;
+                    Swap(arr, i, pivot++);
                 }
             }
+
+            Swap(arr, pivot, right);
+            return pivot;
         }
+
+        private void Swap(int[] arr, int x, int y)
+        {
+            int temp = arr[x];
+            arr[x] = arr[y];
+            arr[y] = temp;
+        }
+
     }
 }
