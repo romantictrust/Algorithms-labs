@@ -10,7 +10,7 @@ namespace Global
             int[] fromTo = { -5000000, 5000000 };
             int start = 0;
             int end = arrLen - 1;
-            int leftUnsorted = 10;
+            int leftUnsorted = 11;
             Sorts srt = new Sorts();
 
             ArrayCreator arr = new ArrayCreator(arrLen, fromTo);
@@ -19,7 +19,7 @@ namespace Global
             srt.QuickSort(filledArr, start, end, true);
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
-            Console.WriteLine("QS Random: {0}ms", elapsedMs);
+            Console.WriteLine("QuickSort: {0}ms", elapsedMs);
 
             
             ArrayCreator arr1 = new ArrayCreator(arrLen, fromTo);
@@ -28,7 +28,7 @@ namespace Global
             srt.CombinedSort(filledArr1, start, end, leftUnsorted);
             watch1.Stop();
             var elapsedMs1 = watch1.ElapsedMilliseconds;
-            Console.WriteLine("CS Regular: {0}ms", elapsedMs1);
+            Console.WriteLine("CombinedSort: {0}ms", elapsedMs1);
 
             // foreach (var entry in filledArr)
             // {
