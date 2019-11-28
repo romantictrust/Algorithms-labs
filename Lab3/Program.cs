@@ -14,7 +14,7 @@ namespace Lab3
             int[] fromTo = { from, to };
             int size = (int)Math.Pow(10, 7);
             File.WriteAllText(path, tableTitles);
-            int iterations = 10;
+            int iterations = 25;
             Searches search = new Searches();
 
             for (int i = 0; i < iterations; i++)
@@ -37,6 +37,14 @@ namespace Lab3
                 watch = System.Diagnostics.Stopwatch.StartNew();
                 counter = 0;
                 index = search.BinarySearch(arr, targetElement, ref counter);
+                watch.Stop();
+                elapsedMs = watch.ElapsedMilliseconds;
+                result = $" | ms:{elapsedMs} c:{counter}";
+                File.AppendAllText(path, result);
+
+                watch = System.Diagnostics.Stopwatch.StartNew();
+                counter = 0;
+                index = search.InterpolationSearch(arr, targetElement, ref counter);
                 watch.Stop();
                 elapsedMs = watch.ElapsedMilliseconds;
                 result = $" | ms:{elapsedMs} c:{counter}";
