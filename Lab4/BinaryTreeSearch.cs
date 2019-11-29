@@ -69,7 +69,7 @@ namespace Lab4
         {
             if (tmp == null) return;
             DisplayIncrease(tmp.Left, withDegree);
-            if (!withDegree) Console.Out.Write(tmp.Key);
+            if (!withDegree) Console.Out.Write($"{tmp.Key} ");
             else Console.Out.Write($"{tmp.Key} ({tmp.LeftCounter}, {tmp.RightCounter}) ");
             DisplayIncrease(tmp.Right, withDegree);
         }
@@ -78,7 +78,7 @@ namespace Lab4
         {
             if (tmp == null) return;
             DisplayDecrease(tmp.Right, withDegree);
-            if (!withDegree) Console.Out.Write(tmp.Key);
+            if (!withDegree) Console.Out.Write($"{tmp.Key} ");
             else Console.Out.Write($"{tmp.Key} ({tmp.LeftCounter}, {tmp.RightCounter}) ");
             DisplayDecrease(tmp.Left, withDegree);
         }

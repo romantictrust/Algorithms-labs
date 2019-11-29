@@ -22,9 +22,17 @@ namespace Lab4
 
             Console.Out.WriteLine("---- Tree created ----");
             var watch = System.Diagnostics.Stopwatch.StartNew();
+
+            DateTime start = DateTime.Now;
+
             BTS.Balance();
+
+            DateTime finish = DateTime.Now;
+
             watch.Stop();
             var elapsedMs = watch.ElapsedMilliseconds;
+
+            Console.Out.WriteLine($"Tree balances, time: {(finish - start).TotalMilliseconds}");
             Console.Out.WriteLine($"Tree balances, time: {elapsedMs}");
         }
     }
