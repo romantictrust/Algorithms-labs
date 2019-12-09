@@ -6,7 +6,7 @@ namespace Lab4
     {
         static void Main(string[] args)
         {
-            BinaryTreeSearch BTS = new BinaryTreeSearch();
+            BinarySearchTree BST = new BinarySearchTree();
             int from = 0;
             int to = (int)Math.Pow(10, 7);
             int[] fromTo = { from, to };
@@ -17,7 +17,7 @@ namespace Lab4
 
             foreach (int i in arr)
             {
-                BTS.Insert(i);
+                BST.Insert(i);
             }
 
             Console.Out.WriteLine("---- Tree created ----");
@@ -25,7 +25,7 @@ namespace Lab4
 
             DateTime start = DateTime.Now;
 
-            BTS.Balance();
+            BST.Balance();
 
             DateTime finish = DateTime.Now;
 

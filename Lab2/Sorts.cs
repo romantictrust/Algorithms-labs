@@ -1,6 +1,6 @@
 using System;
 
-namespace Lab_2
+namespace Lab2
 {
     public class Sorts
     {

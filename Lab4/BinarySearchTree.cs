@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Lab4
 {
-    class BinaryTreeSearch
+    class BinarySearchTree
     {
         private Node root;
         //
@@ -13,9 +13,9 @@ namespace Lab4
             get { return root; }
         }
 
-        public BinaryTreeSearch() { }
+        public BinarySearchTree() { }
 
-        public BinaryTreeSearch(Node root)
+        public BinarySearchTree(Node root)
         {
             this.root = root;
         }
@@ -234,7 +234,7 @@ namespace Lab4
             if (n <= 2)
                 return root;
 
-            BinaryTreeSearch temp = new BinaryTreeSearch(root);
+            BinarySearchTree temp = new BinarySearchTree(root);
             Node mid = temp.FindMax(n / 2 + 1);
             temp.Root(mid);
 
